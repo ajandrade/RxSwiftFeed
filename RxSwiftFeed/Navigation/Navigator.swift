@@ -22,7 +22,6 @@ class Navigator: NavigatorRepresentable {
   
   init(navigationController: UINavigationController) {
     self.navigationController = navigationController
-    self.navigationController.navigationBar.prefersLargeTitles = true
   }
   
   // MARK: - FUNCTIONS

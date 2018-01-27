@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func setRootWindow() {
     window = UIWindow(frame: UIScreen.main.bounds)
     let navigationController = UINavigationController()
+    navigationController.navigationBar.prefersLargeTitles = true
     let navigator = Navigator(navigationController: navigationController)
     let rootCoordinator = RootCoordinator(window: window!, navigator: navigator)
     rootCoordinator.start()
