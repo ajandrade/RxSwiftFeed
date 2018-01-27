@@ -141,6 +141,7 @@
 				E0394954201CD50500413C94 /* Resources */,
 				2BEA558F07E9FCCC00946495 /* [CP] Embed Pods Frameworks */,
 				94788C61E1516E7C8CC6A6A9 /* [CP] Copy Pods Resources */,
+				E0394979201CD76600413C94 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -335,6 +336,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSwiftFeed/Pods-RxSwiftFeed-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E0394979201CD76600413C94 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
