@@ -14,7 +14,11 @@ enum GithubRouter {
 
 extension GithubRouter {
   
-  static let baseURLString = "https://api.github.com/"
+  static var baseURLString: String {
+    let scheme = Configuration.Network.githubSchema.value
+    let path = Configuration.Network.githubBasePath.value
+    return "\(scheme)://\(path)/"
+  }
   
   var method: String {
     switch self {
@@ -28,7 +32,7 @@ extension GithubRouter {
       switch self {
       case .repos(let id): relativePath = id
       }
-      
+      // TODO: - Handle force unwrap
       var url = URL(string: GithubRouter.baseURLString)!
       if let path = relativePath {
         url = url.appendingPathComponent(path)
