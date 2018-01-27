@@ -18,11 +18,12 @@ class Navigator: NavigatorRepresentable {
   
   // MARK: - PROPERTIES
   
-  let navigationController: UINavigationController = {
-    let navController = UINavigationController()
-    navController.navigationBar.prefersLargeTitles = true
-    return navController
-  }()
+  let navigationController: UINavigationController
+  
+  init(navigationController: UINavigationController) {
+    self.navigationController = navigationController
+    self.navigationController.navigationBar.prefersLargeTitles = true
+  }
   
   // MARK: - FUNCTIONS
   

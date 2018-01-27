@@ -14,13 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    
-    window = UIWindow(frame: UIScreen.main.bounds)
-    
-    let rootCoordinator = RootCoordinator(window: window!, navigator: Navigator())
-    rootCoordinator.start()
-    
+    setRootWindow()
     return true
+  }
+  
+  private func setRootWindow() {
+    window = UIWindow(frame: UIScreen.main.bounds)
+    let navigationController = UINavigationController()
+    let navigator = Navigator(navigationController: navigationController)
+    let rootCoordinator = RootCoordinator(window: window!, navigator: navigator)
+    rootCoordinator.start()
   }
 
 }
