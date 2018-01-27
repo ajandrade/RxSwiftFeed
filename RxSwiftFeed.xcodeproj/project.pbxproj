@@ -11,7 +11,6 @@
 		C6DF37875100E6517D24D88F /* Pods_RxSwiftFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBA9E5AA512CFBAC101599 /* Pods_RxSwiftFeedTests.framework */; };
 		E039495A201CD50500413C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394959201CD50500413C94 /* AppDelegate.swift */; };
 		E0394961201CD50500413C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0394960201CD50500413C94 /* Assets.xcassets */; };
-		E039496F201CD50500413C94 /* RxSwiftFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039496E201CD50500413C94 /* RxSwiftFeedTests.swift */; };
 		E039497F201CD92800413C94 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E039497E201CD92800413C94 /* Launch Screen.storyboard */; };
 		E0394982201CD9DA00413C94 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394980201CD9DA00413C94 /* FeedViewController.swift */; };
 		E0394983201CD9DA00413C94 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0394981201CD9DA00413C94 /* FeedViewController.xib */; };
@@ -21,6 +20,8 @@
 		E0394990201CDE1C00413C94 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039498F201CDE1C00413C94 /* Coordinator.swift */; };
 		E0394994201CE0E100413C94 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394993201CE0E100413C94 /* RootCoordinator.swift */; };
 		E0394996201CE16B00413C94 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394995201CE16B00413C94 /* FeedCoordinator.swift */; };
+		E039499C201CE70F00413C94 /* FeedCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */; };
+		E03949A0201CECAB00413C94 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039499F201CECAB00413C94 /* MockNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,6 @@
 		E0394960201CD50500413C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0394965201CD50500413C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E039496A201CD50500413C94 /* RxSwiftFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E039496E201CD50500413C94 /* RxSwiftFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftFeedTests.swift; sourceTree = "<group>"; };
 		E0394970201CD50500413C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E039497E201CD92800413C94 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E0394980201CD9DA00413C94 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		E039498F201CDE1C00413C94 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E0394993201CE0E100413C94 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		E0394995201CE16B00413C94 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
+		E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinatorTests.swift; sourceTree = "<group>"; };
+		E039499F201CECAB00413C94 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 		EB0FF26F85A1895B862361C1 /* Pods-RxSwiftFeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftFeedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftFeedTests/Pods-RxSwiftFeedTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,8 +136,9 @@
 		E039496D201CD50500413C94 /* RxSwiftFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				E039496E201CD50500413C94 /* RxSwiftFeedTests.swift */,
-				E0394970201CD50500413C94 /* Info.plist */,
+				E0394997201CE6CB00413C94 /* Mocks */,
+				E0394998201CE6CF00413C94 /* Supporting Files */,
+				E0394999201CE6E300413C94 /* Cases */,
 			);
 			path = RxSwiftFeedTests;
 			sourceTree = "<group>";
@@ -202,6 +205,46 @@
 			path = FeedScene;
 			sourceTree = "<group>";
 		};
+		E0394997201CE6CB00413C94 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E039499F201CECAB00413C94 /* MockNavigationController.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E0394998201CE6CF00413C94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0394970201CD50500413C94 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E0394999201CE6E300413C94 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				E0EEF1B3201CF00F00052978 /* Scenes */,
+			);
+			path = Cases;
+			sourceTree = "<group>";
+		};
+		E039499A201CE6E600413C94 /* FeedScene */ = {
+			isa = PBXGroup;
+			children = (
+				E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */,
+			);
+			path = FeedScene;
+			sourceTree = "<group>";
+		};
+		E0EEF1B3201CF00F00052978 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E039499A201CE6E600413C94 /* FeedScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +306,7 @@
 					};
 					E0394969201CD50500413C94 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E0394955201CD50500413C94;
 					};
@@ -446,7 +490,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E039496F201CD50500413C94 /* RxSwiftFeedTests.swift in Sources */,
+				E039499C201CE70F00413C94 /* FeedCoordinatorTests.swift in Sources */,
+				E03949A0201CECAB00413C94 /* MockNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,12 +651,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8WVW27EH5;
-				INFOPLIST_FILE = RxSwiftFeedTests/Info.plist;
+				INFOPLIST_FILE = "RxSwiftFeedTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amadeuandrade.RxSwiftFeedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxSwiftFeed.app/RxSwiftFeed";
@@ -624,9 +671,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P8WVW27EH5;
-				INFOPLIST_FILE = RxSwiftFeedTests/Info.plist;
+				INFOPLIST_FILE = "RxSwiftFeedTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amadeuandrade.RxSwiftFeedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
