@@ -22,6 +22,7 @@
 		E0394996201CE16B00413C94 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394995201CE16B00413C94 /* FeedCoordinator.swift */; };
 		E039499C201CE70F00413C94 /* FeedCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */; };
 		E03949A0201CECAB00413C94 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039499F201CECAB00413C94 /* MockNavigationController.swift */; };
+		E0EEF1B7201CF06600052978 /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EEF1B6201CF06600052978 /* NavigatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		E0394995201CE16B00413C94 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinatorTests.swift; sourceTree = "<group>"; };
 		E039499F201CECAB00413C94 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
+		E0EEF1B6201CF06600052978 /* NavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTests.swift; sourceTree = "<group>"; };
 		EB0FF26F85A1895B862361C1 /* Pods-RxSwiftFeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftFeedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftFeedTests/Pods-RxSwiftFeedTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +226,7 @@
 		E0394999201CE6E300413C94 /* Cases */ = {
 			isa = PBXGroup;
 			children = (
+				E0EEF1B5201CF04E00052978 /* Navigation */,
 				E0EEF1B3201CF00F00052978 /* Scenes */,
 			);
 			path = Cases;
@@ -243,6 +246,14 @@
 				E039499A201CE6E600413C94 /* FeedScene */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E0EEF1B5201CF04E00052978 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E0EEF1B6201CF06600052978 /* NavigatorTests.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E039499C201CE70F00413C94 /* FeedCoordinatorTests.swift in Sources */,
+				E0EEF1B7201CF06600052978 /* NavigatorTests.swift in Sources */,
 				E03949A0201CECAB00413C94 /* MockNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
