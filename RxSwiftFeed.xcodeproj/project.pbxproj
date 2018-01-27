@@ -22,6 +22,7 @@
 		E0394996201CE16B00413C94 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394995201CE16B00413C94 /* FeedCoordinator.swift */; };
 		E039499C201CE70F00413C94 /* FeedCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */; };
 		E03949A0201CECAB00413C94 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039499F201CECAB00413C94 /* MockNavigationController.swift */; };
+		E0A864AA201CFA8B0027A553 /* RootCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864A9201CFA8B0027A553 /* RootCoordinatorTests.swift */; };
 		E0EEF1B7201CF06600052978 /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EEF1B6201CF06600052978 /* NavigatorTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		E0394995201CE16B00413C94 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinatorTests.swift; sourceTree = "<group>"; };
 		E039499F201CECAB00413C94 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
+		E0A864A9201CFA8B0027A553 /* RootCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorTests.swift; sourceTree = "<group>"; };
 		E0EEF1B6201CF06600052978 /* NavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTests.swift; sourceTree = "<group>"; };
 		EB0FF26F85A1895B862361C1 /* Pods-RxSwiftFeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftFeedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftFeedTests/Pods-RxSwiftFeedTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -240,9 +242,18 @@
 			path = FeedScene;
 			sourceTree = "<group>";
 		};
+		E0A864A8201CFA760027A553 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E0A864A9201CFA8B0027A553 /* RootCoordinatorTests.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		E0EEF1B3201CF00F00052978 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E0A864A8201CFA760027A553 /* Root */,
 				E039499A201CE6E600413C94 /* FeedScene */,
 			);
 			path = Scenes;
@@ -501,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A864AA201CFA8B0027A553 /* RootCoordinatorTests.swift in Sources */,
 				E039499C201CE70F00413C94 /* FeedCoordinatorTests.swift in Sources */,
 				E0EEF1B7201CF06600052978 /* NavigatorTests.swift in Sources */,
 				E03949A0201CECAB00413C94 /* MockNavigationController.swift in Sources */,
