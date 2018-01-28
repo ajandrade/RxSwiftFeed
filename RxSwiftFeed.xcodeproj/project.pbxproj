@@ -10,6 +10,7 @@
 		409C834C4F98EAC9F73422E3 /* Pods_RxSwiftFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD85E6A959E238E5934541BB /* Pods_RxSwiftFeed.framework */; };
 		C6DF37875100E6517D24D88F /* Pods_RxSwiftFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBA9E5AA512CFBAC101599 /* Pods_RxSwiftFeedTests.framework */; };
 		E016DA2E201E08DA0043BEE5 /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA2D201E08DA0043BEE5 /* ObservableType.swift */; };
+		E016DA35201E14FF0043BEE5 /* Events.json in Resources */ = {isa = PBXBuildFile; fileRef = E016DA34201E14FF0043BEE5 /* Events.json */; };
 		E039495A201CD50500413C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394959201CD50500413C94 /* AppDelegate.swift */; };
 		E0394961201CD50500413C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0394960201CD50500413C94 /* Assets.xcassets */; };
 		E039497F201CD92800413C94 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E039497E201CD92800413C94 /* Launch Screen.storyboard */; };
@@ -50,6 +51,7 @@
 		CD85E6A959E238E5934541BB /* Pods_RxSwiftFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD50E6E34D77A301542C7E6 /* Pods-RxSwiftFeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftFeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftFeedTests/Pods-RxSwiftFeedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E016DA2D201E08DA0043BEE5 /* ObservableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableType.swift; sourceTree = "<group>"; };
+		E016DA34201E14FF0043BEE5 /* Events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Events.json; sourceTree = "<group>"; };
 		E0394956201CD50500413C94 /* RxSwiftFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0394959201CD50500413C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0394960201CD50500413C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		E0394998201CE6CF00413C94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E016DA34201E14FF0043BEE5 /* Events.json */,
 				E0394970201CD50500413C94 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -431,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E016DA35201E14FF0043BEE5 /* Events.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
