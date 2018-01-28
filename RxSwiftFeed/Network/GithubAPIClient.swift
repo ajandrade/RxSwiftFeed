@@ -15,9 +15,20 @@ protocol GithubAPIClientProtocol {
 
 class GithubAPIClient: GithubAPIClientProtocol {
   
+  // MARK: - PROPERTIES
+  
+  private let session: URLSession
+  
+  // MARK: - INITIALIZER
+  
+  init(session: URLSession = URLSession.shared) {
+    self.session = session
+  }
+  
+  // MARK: - FUNCTIONS
+  
   func fetchEvents(for identifier: String) -> Single<NetworkResult> {
-    return URLSession
-      .shared
+    return session
       .rx
       .response(request: GithubAPI.events(identifier).asURLRequest())
       .debug()
