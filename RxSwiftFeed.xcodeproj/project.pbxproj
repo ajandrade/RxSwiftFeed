@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		409C834C4F98EAC9F73422E3 /* Pods_RxSwiftFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD85E6A959E238E5934541BB /* Pods_RxSwiftFeed.framework */; };
 		C6DF37875100E6517D24D88F /* Pods_RxSwiftFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBA9E5AA512CFBAC101599 /* Pods_RxSwiftFeedTests.framework */; };
+		E016DA2E201E08DA0043BEE5 /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA2D201E08DA0043BEE5 /* ObservableType.swift */; };
 		E039495A201CD50500413C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394959201CD50500413C94 /* AppDelegate.swift */; };
 		E0394961201CD50500413C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0394960201CD50500413C94 /* Assets.xcassets */; };
 		E039497F201CD92800413C94 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E039497E201CD92800413C94 /* Launch Screen.storyboard */; };
@@ -48,6 +49,7 @@
 		AD4068D603C4B0D159E71EC5 /* Pods-RxSwiftFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftFeed/Pods-RxSwiftFeed.release.xcconfig"; sourceTree = "<group>"; };
 		CD85E6A959E238E5934541BB /* Pods_RxSwiftFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD50E6E34D77A301542C7E6 /* Pods-RxSwiftFeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftFeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftFeedTests/Pods-RxSwiftFeedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E016DA2D201E08DA0043BEE5 /* ObservableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableType.swift; sourceTree = "<group>"; };
 		E0394956201CD50500413C94 /* RxSwiftFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0394959201CD50500413C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0394960201CD50500413C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E016DA2C201E08CA0043BEE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E016DA2D201E08DA0043BEE5 /* ObservableType.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E039494D201CD50500413C94 = {
 			isa = PBXGroup;
 			children = (
@@ -144,8 +154,9 @@
 		E0394958201CD50500413C94 /* RxSwiftFeed */ = {
 			isa = PBXGroup;
 			children = (
-				E0FE8D1E201DF68D001CBBD5 /* Enums */,
 				E0394959201CD50500413C94 /* AppDelegate.swift */,
+				E016DA2C201E08CA0043BEE5 /* Extensions */,
+				E0FE8D1E201DF68D001CBBD5 /* Enums */,
 				E0A864B6201D05310027A553 /* Configurations */,
 				E039497B201CD8EA00413C94 /* Navigation */,
 				E0A864AB201D00180027A553 /* Network */,
@@ -273,8 +284,6 @@
 		E0A864AB201D00180027A553 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				E0A864B0201D01E00027A553 /* HTTPMethod.swift */,
-				E0FE8D21201DF6D8001CBBD5 /* NetworkError.swift */,
 				E0A864AC201D00320027A553 /* GithubAPI.swift */,
 				E0FE8D1A201DE60B001CBBD5 /* GithubAPIClient.swift */,
 			);
@@ -314,6 +323,8 @@
 		E0FE8D1E201DF68D001CBBD5 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				E0FE8D21201DF6D8001CBBD5 /* NetworkError.swift */,
+				E0A864B0201D01E00027A553 /* HTTPMethod.swift */,
 				E0FE8D1F201DF698001CBBD5 /* Result.swift */,
 			);
 			path = Enums;
@@ -558,6 +569,7 @@
 				E0A864AD201D00320027A553 /* GithubAPI.swift in Sources */,
 				E0394985201CD9E700413C94 /* FeedViewModel.swift in Sources */,
 				E039498D201CDC2900413C94 /* Navigator.swift in Sources */,
+				E016DA2E201E08DA0043BEE5 /* ObservableType.swift in Sources */,
 				E0394990201CDE1C00413C94 /* Coordinator.swift in Sources */,
 				E0FE8D1B201DE60B001CBBD5 /* GithubAPIClient.swift in Sources */,
 				E0A864B1201D01E00027A553 /* HTTPMethod.swift in Sources */,

@@ -8,11 +8,19 @@
 
 import Foundation
 
+protocol API {
+  static var baseURLString: String { get }
+  var method: String { get }
+  var path: String { get }
+  var parameters: [String: Any]? { get }
+  func asURLRequest() -> URLRequest
+}
+
 enum GithubAPI {
   case events(String)
 }
 
-extension GithubAPI {
+extension GithubAPI: API {
   
   static var baseURLString: String {
     let scheme = Configuration.Network.githubSchema.value
@@ -41,7 +49,7 @@ extension GithubAPI {
     }
   }
   
-  public func asURLRequest() -> URLRequest {
+  func asURLRequest() -> URLRequest {
     guard var url = URL(string: GithubAPI.baseURLString) else { fatalError("URL is not valid.") }
     url = url.appendingPathComponent(self.path)
     var request = URLRequest(url: url)
