@@ -9,8 +9,13 @@
 /* Begin PBXBuildFile section */
 		409C834C4F98EAC9F73422E3 /* Pods_RxSwiftFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD85E6A959E238E5934541BB /* Pods_RxSwiftFeed.framework */; };
 		C6DF37875100E6517D24D88F /* Pods_RxSwiftFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBBA9E5AA512CFBAC101599 /* Pods_RxSwiftFeedTests.framework */; };
-		E016DA2E201E08DA0043BEE5 /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA2D201E08DA0043BEE5 /* ObservableType.swift */; };
 		E016DA35201E14FF0043BEE5 /* Events.json in Resources */ = {isa = PBXBuildFile; fileRef = E016DA34201E14FF0043BEE5 /* Events.json */; };
+		E016DA3A201E192C0043BEE5 /* GithubAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA39201E192C0043BEE5 /* GithubAPIClientTests.swift */; };
+		E016DA3C201E19650043BEE5 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA3B201E19650043BEE5 /* MockURLSession.swift */; };
+		E016DA42201E24DA0043BEE5 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA41201E24DA0043BEE5 /* URLSessionProtocol.swift */; };
+		E016DA44201E250C0043BEE5 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA43201E250C0043BEE5 /* URLSession.swift */; };
+		E016DA46201E25BF0043BEE5 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA45201E25BF0043BEE5 /* MockURLSessionDataTask.swift */; };
+		E016DA48201E571F0043BEE5 /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA47201E571E0043BEE5 /* ObservableType.swift */; };
 		E039495A201CD50500413C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394959201CD50500413C94 /* AppDelegate.swift */; };
 		E0394961201CD50500413C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0394960201CD50500413C94 /* Assets.xcassets */; };
 		E039497F201CD92800413C94 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E039497E201CD92800413C94 /* Launch Screen.storyboard */; };
@@ -50,8 +55,13 @@
 		AD4068D603C4B0D159E71EC5 /* Pods-RxSwiftFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftFeed/Pods-RxSwiftFeed.release.xcconfig"; sourceTree = "<group>"; };
 		CD85E6A959E238E5934541BB /* Pods_RxSwiftFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD50E6E34D77A301542C7E6 /* Pods-RxSwiftFeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftFeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftFeedTests/Pods-RxSwiftFeedTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E016DA2D201E08DA0043BEE5 /* ObservableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableType.swift; sourceTree = "<group>"; };
 		E016DA34201E14FF0043BEE5 /* Events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Events.json; sourceTree = "<group>"; };
+		E016DA39201E192C0043BEE5 /* GithubAPIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIClientTests.swift; sourceTree = "<group>"; };
+		E016DA3B201E19650043BEE5 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		E016DA41201E24DA0043BEE5 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		E016DA43201E250C0043BEE5 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		E016DA45201E25BF0043BEE5 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		E016DA47201E571E0043BEE5 /* ObservableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableType.swift; sourceTree = "<group>"; };
 		E0394956201CD50500413C94 /* RxSwiftFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0394959201CD50500413C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0394960201CD50500413C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,9 +138,18 @@
 		E016DA2C201E08CA0043BEE5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E016DA2D201E08DA0043BEE5 /* ObservableType.swift */,
+				E016DA47201E571E0043BEE5 /* ObservableType.swift */,
+				E016DA43201E250C0043BEE5 /* URLSession.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E016DA36201E19050043BEE5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E016DA39201E192C0043BEE5 /* GithubAPIClientTests.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		E039494D201CD50500413C94 = {
@@ -219,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				E039498F201CDE1C00413C94 /* Coordinator.swift */,
+				E016DA41201E24DA0043BEE5 /* URLSessionProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -246,6 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				E039499F201CECAB00413C94 /* MockNavigationController.swift */,
+				E016DA3B201E19650043BEE5 /* MockURLSession.swift */,
+				E016DA45201E25BF0043BEE5 /* MockURLSessionDataTask.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -262,6 +284,7 @@
 		E0394999201CE6E300413C94 /* Cases */ = {
 			isa = PBXGroup;
 			children = (
+				E016DA36201E19050043BEE5 /* Network */,
 				E0EEF1B5201CF04E00052978 /* Navigation */,
 				E0EEF1B3201CF00F00052978 /* Scenes */,
 			);
@@ -564,18 +587,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E016DA48201E571F0043BEE5 /* ObservableType.swift in Sources */,
 				E0394996201CE16B00413C94 /* FeedCoordinator.swift in Sources */,
 				E0FE8D22201DF6D8001CBBD5 /* NetworkError.swift in Sources */,
 				E0FE8D20201DF698001CBBD5 /* Result.swift in Sources */,
+				E016DA44201E250C0043BEE5 /* URLSession.swift in Sources */,
 				E0394982201CD9DA00413C94 /* FeedViewController.swift in Sources */,
 				E039495A201CD50500413C94 /* AppDelegate.swift in Sources */,
 				E0394989201CDAE700413C94 /* NavigationTransitionType.swift in Sources */,
 				E0A864AD201D00320027A553 /* GithubAPI.swift in Sources */,
 				E0394985201CD9E700413C94 /* FeedViewModel.swift in Sources */,
 				E039498D201CDC2900413C94 /* Navigator.swift in Sources */,
-				E016DA2E201E08DA0043BEE5 /* ObservableType.swift in Sources */,
 				E0394990201CDE1C00413C94 /* Coordinator.swift in Sources */,
 				E0FE8D1B201DE60B001CBBD5 /* GithubAPIClient.swift in Sources */,
+				E016DA42201E24DA0043BEE5 /* URLSessionProtocol.swift in Sources */,
 				E0A864B1201D01E00027A553 /* HTTPMethod.swift in Sources */,
 				E0394994201CE0E100413C94 /* RootCoordinator.swift in Sources */,
 				E0A864BD201D08640027A553 /* Configuration.swift in Sources */,
@@ -586,10 +611,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E016DA3C201E19650043BEE5 /* MockURLSession.swift in Sources */,
+				E016DA3A201E192C0043BEE5 /* GithubAPIClientTests.swift in Sources */,
 				E0A864AA201CFA8B0027A553 /* RootCoordinatorTests.swift in Sources */,
 				E039499C201CE70F00413C94 /* FeedCoordinatorTests.swift in Sources */,
 				E0EEF1B7201CF06600052978 /* NavigatorTests.swift in Sources */,
 				E03949A0201CECAB00413C94 /* MockNavigationController.swift in Sources */,
+				E016DA46201E25BF0043BEE5 /* MockURLSessionDataTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
