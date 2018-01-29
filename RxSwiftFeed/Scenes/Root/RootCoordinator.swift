@@ -14,14 +14,16 @@ class RootCoordinator {
   
   private let window: UIWindow
   private let navigator: NavigatorRepresentable
+  private let dependencies: DependencyContainer
   
   // MARK: - INITIALIZER
   
-  init(window: UIWindow, navigator: NavigatorRepresentable) {
+  init(window: UIWindow, navigator: NavigatorRepresentable, dependencies: DependencyContainer) {
     self.window = window
     self.navigator = navigator
     self.window.rootViewController = navigator.navigationController
     self.window.makeKeyAndVisible()
+    self.dependencies = dependencies
   }
   
 }
@@ -29,7 +31,7 @@ class RootCoordinator {
 extension RootCoordinator: Coordinator {
   
   func start() {
-    let feedCoordinator = FeedCoordinator(navigator: navigator)
+    let feedCoordinator = FeedCoordinator(navigator: navigator, dependencies: dependencies)
     feedCoordinator.start()
   }
   

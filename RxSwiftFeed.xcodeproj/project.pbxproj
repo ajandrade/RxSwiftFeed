@@ -33,6 +33,7 @@
 		E0A864AD201D00320027A553 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864AC201D00320027A553 /* GithubAPI.swift */; };
 		E0A864B1201D01E00027A553 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864B0201D01E00027A553 /* HTTPMethod.swift */; };
 		E0A864BD201D08640027A553 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864BC201D08640027A553 /* Configuration.swift */; };
+		E0AC2BBD201FA5D5008A7EE4 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC2BBC201FA5D5008A7EE4 /* DependencyContainer.swift */; };
 		E0EEF1B7201CF06600052978 /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EEF1B6201CF06600052978 /* NavigatorTests.swift */; };
 		E0FE8D1B201DE60B001CBBD5 /* GithubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE8D1A201DE60B001CBBD5 /* GithubAPIClient.swift */; };
 		E0FE8D20201DF698001CBBD5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE8D1F201DF698001CBBD5 /* Result.swift */; };
@@ -88,6 +89,7 @@
 		E0A864BA201D05980027A553 /* release.tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.tests.xcconfig; sourceTree = "<group>"; };
 		E0A864BB201D05A40027A553 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 		E0A864BC201D08640027A553 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		E0AC2BBC201FA5D5008A7EE4 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		E0EEF1B6201CF06600052978 /* NavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTests.swift; sourceTree = "<group>"; };
 		E0FE8D1A201DE60B001CBBD5 /* GithubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIClient.swift; sourceTree = "<group>"; };
 		E0FE8D1F201DF698001CBBD5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 		E039497D201CD8F300413C94 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E0AC2BBC201FA5D5008A7EE4 /* DependencyContainer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 			files = (
 				E016DA48201E571F0043BEE5 /* ObservableType.swift in Sources */,
 				E0394996201CE16B00413C94 /* FeedCoordinator.swift in Sources */,
+				E0AC2BBD201FA5D5008A7EE4 /* DependencyContainer.swift in Sources */,
 				E0FE8D22201DF6D8001CBBD5 /* NetworkError.swift in Sources */,
 				E0FE8D20201DF698001CBBD5 /* Result.swift in Sources */,
 				E016DA44201E250C0043BEE5 /* URLSession.swift in Sources */,

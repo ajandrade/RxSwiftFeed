@@ -23,8 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let navigationController = UINavigationController()
     navigationController.navigationBar.prefersLargeTitles = true
     let navigator = Navigator(navigationController: navigationController)
-    let rootCoordinator = RootCoordinator(window: window!, navigator: navigator)
+    let dependencies = buildDependencies()
+    let rootCoordinator = RootCoordinator(window: window!, navigator: navigator, dependencies: dependencies)
     rootCoordinator.start()
+  }
+  
+  private func buildDependencies() -> DependencyContainer {
+    let githubProvider = GithubAPIClient()
+    let dependencies = DependencyContainer(githubProvider: githubProvider)
+    return dependencies
   }
 
 }

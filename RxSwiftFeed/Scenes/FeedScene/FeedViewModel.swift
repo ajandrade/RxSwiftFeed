@@ -10,4 +10,18 @@ import Foundation
 
 protocol FeedViewModelRepresentable { }
 
-struct FeedViewModel: FeedViewModelRepresentable { }
+struct FeedViewModel: FeedViewModelRepresentable {
+
+  typealias Dependencies = HasGithubProvider // & ..
+
+  // MARK: - PROPERTIES
+  
+  private let dependencies: Dependencies
+  
+  // MARK: - INITIALIZER
+  
+  init(dependencies: Dependencies) {
+    self.dependencies = dependencies
+  }
+  
+}

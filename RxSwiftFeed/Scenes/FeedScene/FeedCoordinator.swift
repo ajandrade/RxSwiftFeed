@@ -12,19 +12,21 @@ class FeedCoordinator {
   
   // MARK: - DEPENDENCIES
   
-  fileprivate let navigator: NavigatorRepresentable
+  private let navigator: NavigatorRepresentable
+  private let dependencies: DependencyContainer
   
   // MARK: - INITIALIZER
   
-  init(navigator: NavigatorRepresentable) {
+  init(navigator: NavigatorRepresentable, dependencies: DependencyContainer) {
     self.navigator = navigator
+    self.dependencies = dependencies
   }
 }
 
 extension FeedCoordinator: Coordinator {
   func start() {
     let feedViewController = FeedViewController()
-    let feedViewModel = FeedViewModel()
+    let feedViewModel = FeedViewModel(dependencies: dependencies)
     feedViewController.viewModel = feedViewModel
     navigator.transition(to: feedViewController, type: .root)
   }
