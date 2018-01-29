@@ -19,7 +19,7 @@ extension Event: Decodable {
   // MARK: - KEYS
   
   enum CodingKeys: String, CodingKey { case actor, repo, type }
-
+  
   // MARK: - INITIALIZER
   
   init(from decoder: Decoder) throws {
@@ -27,6 +27,14 @@ extension Event: Decodable {
     actor = try values.decode(Actor.self, forKey: .actor)
     repository = try values.decode(Repository.self, forKey: .repo)
     action = try values.decode(String.self, forKey: .type)
+  }
+  
+}
+
+extension Event: Equatable {
+  
+  static func == (lhs: Event, rhs: Event) -> Bool {
+    return lhs.action == rhs.action && lhs.actor == rhs.actor && lhs.repository == rhs.repository
   }
   
 }
@@ -61,4 +69,3 @@ extension Event: Decodable {
 //    "avatar_url": "https://avatars.githubusercontent.com/u/6407041?"
 //  }
 //}
-

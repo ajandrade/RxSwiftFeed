@@ -37,6 +37,9 @@
 		E0AC2BBF201FAA52008A7EE4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC2BBE201FAA52008A7EE4 /* Event.swift */; };
 		E0AC2BC1201FABD7008A7EE4 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC2BC0201FABD7008A7EE4 /* Actor.swift */; };
 		E0AC2BC3201FABDD008A7EE4 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC2BC2201FABDD008A7EE4 /* Repository.swift */; };
+		E0AC2BC6201FC43D008A7EE4 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC2BC5201FC43D008A7EE4 /* EventTests.swift */; };
+		E0AC2BC8201FC448008A7EE4 /* ActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC2BC7201FC448008A7EE4 /* ActorTests.swift */; };
+		E0AC2BCA201FC452008A7EE4 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC2BC9201FC452008A7EE4 /* RepositoryTests.swift */; };
 		E0EEF1B7201CF06600052978 /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EEF1B6201CF06600052978 /* NavigatorTests.swift */; };
 		E0FE8D1B201DE60B001CBBD5 /* GithubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE8D1A201DE60B001CBBD5 /* GithubAPIClient.swift */; };
 		E0FE8D20201DF698001CBBD5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE8D1F201DF698001CBBD5 /* Result.swift */; };
@@ -96,6 +99,9 @@
 		E0AC2BBE201FAA52008A7EE4 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E0AC2BC0201FABD7008A7EE4 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		E0AC2BC2201FABDD008A7EE4 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		E0AC2BC5201FC43D008A7EE4 /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
+		E0AC2BC7201FC448008A7EE4 /* ActorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTests.swift; sourceTree = "<group>"; };
+		E0AC2BC9201FC452008A7EE4 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		E0EEF1B6201CF06600052978 /* NavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTests.swift; sourceTree = "<group>"; };
 		E0FE8D1A201DE60B001CBBD5 /* GithubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIClient.swift; sourceTree = "<group>"; };
 		E0FE8D1F201DF698001CBBD5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -296,6 +302,7 @@
 		E0394999201CE6E300413C94 /* Cases */ = {
 			isa = PBXGroup;
 			children = (
+				E0AC2BC4201FC153008A7EE4 /* Models */,
 				E016DA36201E19050043BEE5 /* Network */,
 				E0EEF1B5201CF04E00052978 /* Navigation */,
 				E0EEF1B3201CF00F00052978 /* Scenes */,
@@ -339,6 +346,16 @@
 				E0A864BB201D05A40027A553 /* release.xcconfig */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		E0AC2BC4201FC153008A7EE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0AC2BC5201FC43D008A7EE4 /* EventTests.swift */,
+				E0AC2BC7201FC448008A7EE4 /* ActorTests.swift */,
+				E0AC2BC9201FC452008A7EE4 /* RepositoryTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E0EEF1B3201CF00F00052978 /* Scenes */ = {
@@ -627,7 +644,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0AC2BC8201FC448008A7EE4 /* ActorTests.swift in Sources */,
+				E0AC2BC6201FC43D008A7EE4 /* EventTests.swift in Sources */,
 				E016DA3C201E19650043BEE5 /* MockURLSession.swift in Sources */,
+				E0AC2BCA201FC452008A7EE4 /* RepositoryTests.swift in Sources */,
 				E016DA3A201E192C0043BEE5 /* GithubAPIClientTests.swift in Sources */,
 				E0A864AA201CFA8B0027A553 /* RootCoordinatorTests.swift in Sources */,
 				E039499C201CE70F00413C94 /* FeedCoordinatorTests.swift in Sources */,

@@ -29,7 +29,15 @@ extension Actor: Decodable {
     login = try values.decode(String.self, forKey: .login)
     avatarUrlString = try values.decode(String.self, forKey: .avatarUrlString)
   }
+  
+}
 
+extension Actor: Equatable {
+  
+  static func == (lhs: Actor, rhs: Actor) -> Bool {
+    return lhs.login == rhs.login && lhs.avatarUrlString == rhs.avatarUrlString
+  }
+  
 }
 
 // EXAMPLE:
