@@ -40,6 +40,9 @@
 		E0AC2BC6201FC43D008A7EE4 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC2BC5201FC43D008A7EE4 /* EventTests.swift */; };
 		E0AC2BC8201FC448008A7EE4 /* ActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC2BC7201FC448008A7EE4 /* ActorTests.swift */; };
 		E0AC2BCA201FC452008A7EE4 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC2BC9201FC452008A7EE4 /* RepositoryTests.swift */; };
+		E0AC2BCC201FC7ED008A7EE4 /* Repository.json in Resources */ = {isa = PBXBuildFile; fileRef = E0AC2BCB201FC7ED008A7EE4 /* Repository.json */; };
+		E0AC2BCE201FC815008A7EE4 /* Actor.json in Resources */ = {isa = PBXBuildFile; fileRef = E0AC2BCD201FC815008A7EE4 /* Actor.json */; };
+		E0AC2BD1201FC980008A7EE4 /* Event.json in Resources */ = {isa = PBXBuildFile; fileRef = E0AC2BD0201FC980008A7EE4 /* Event.json */; };
 		E0EEF1B7201CF06600052978 /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EEF1B6201CF06600052978 /* NavigatorTests.swift */; };
 		E0FE8D1B201DE60B001CBBD5 /* GithubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE8D1A201DE60B001CBBD5 /* GithubAPIClient.swift */; };
 		E0FE8D20201DF698001CBBD5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE8D1F201DF698001CBBD5 /* Result.swift */; };
@@ -102,6 +105,9 @@
 		E0AC2BC5201FC43D008A7EE4 /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		E0AC2BC7201FC448008A7EE4 /* ActorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorTests.swift; sourceTree = "<group>"; };
 		E0AC2BC9201FC452008A7EE4 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		E0AC2BCB201FC7ED008A7EE4 /* Repository.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Repository.json; sourceTree = "<group>"; };
+		E0AC2BCD201FC815008A7EE4 /* Actor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Actor.json; sourceTree = "<group>"; };
+		E0AC2BD0201FC980008A7EE4 /* Event.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Event.json; sourceTree = "<group>"; };
 		E0EEF1B6201CF06600052978 /* NavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTests.swift; sourceTree = "<group>"; };
 		E0FE8D1A201DE60B001CBBD5 /* GithubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIClient.swift; sourceTree = "<group>"; };
 		E0FE8D1F201DF698001CBBD5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -294,6 +300,9 @@
 			isa = PBXGroup;
 			children = (
 				E016DA34201E14FF0043BEE5 /* Events.json */,
+				E0AC2BD0201FC980008A7EE4 /* Event.json */,
+				E0AC2BCD201FC815008A7EE4 /* Actor.json */,
+				E0AC2BCB201FC7ED008A7EE4 /* Repository.json */,
 				E0394970201CD50500413C94 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -486,7 +495,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0AC2BD1201FC980008A7EE4 /* Event.json in Resources */,
 				E016DA35201E14FF0043BEE5 /* Events.json in Resources */,
+				E0AC2BCC201FC7ED008A7EE4 /* Repository.json in Resources */,
+				E0AC2BCE201FC815008A7EE4 /* Actor.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

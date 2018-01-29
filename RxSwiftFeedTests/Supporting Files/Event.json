@@ -1,0 +1,29 @@
+{
+    "id": "7161340045",
+    "type": "WatchEvent",
+    "actor": {
+      "id": 10565354,
+      "login": "Brusnikin",
+      "display_login": "Brusnikin",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Brusnikin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10565354?"
+    },
+    "repo": {
+      "id": 33569135,
+      "name": "ReactiveX/RxSwift",
+      "url": "https://api.github.com/repos/ReactiveX/RxSwift"
+    },
+    "payload": {
+      "action": "started"
+    },
+    "public": true,
+    "created_at": "2018-01-28T13:01:21Z",
+    "org": {
+      "id": 6407041,
+      "login": "ReactiveX",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/ReactiveX",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6407041?"
+    }
+}
