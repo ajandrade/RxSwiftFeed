@@ -19,7 +19,8 @@ class RootCoordinatorTests: XCTestCase {
     super.setUp()
     mockNavController = MockNavigationController()
     navigator = Navigator(navigationController: mockNavController)
-    coordinator = RootCoordinator(window: UIWindow(), navigator: navigator)
+    let dependencies = DependencyContainer(githubProvider: GithubAPIClient())
+    coordinator = RootCoordinator(window: UIWindow(), navigator: navigator, dependencies: dependencies)
     coordinator.start()
   }
   

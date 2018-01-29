@@ -19,7 +19,8 @@ class FeedCoordinatorTests: XCTestCase {
     super.setUp()
     mockNavController = MockNavigationController()
     navigator = Navigator(navigationController: mockNavController)
-    coordinator = FeedCoordinator(navigator: navigator)
+    let dependencies = DependencyContainer(githubProvider: GithubAPIClient())
+    coordinator = FeedCoordinator(navigator: navigator, dependencies: dependencies)
     coordinator.start()
   }
   
