@@ -33,6 +33,19 @@ class GithubAPIClientTests: XCTestCase {
     bag = nil
   }
   
+  func testEndpointIsCorrect() {
+    mockSession = MockURLSession(data: nil, urlResponse: nil, error: nil)
+    apiClient = GithubAPIClient(session: mockSession)
+  
+    let identifier = "ReactiveX/RxSwift"
+    let urlToMatch = GithubAPI.events(identifier).asURLRequest()
+
+    let request = apiClient.fetchEvents(for: identifier)
+    request.subscribe().disposed(by: bag)
+    
+    XCTAssertEqual(mockSession.request, urlToMatch)
+  }
+  
   func testNoResponseErrorIsHandled() {
     mockSession = MockURLSession(data: nil, urlResponse: nil, error: nil)
     apiClient = GithubAPIClient(session: mockSession)
