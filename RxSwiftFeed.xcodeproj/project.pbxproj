@@ -28,6 +28,12 @@
 		E0394996201CE16B00413C94 /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394995201CE16B00413C94 /* FeedCoordinator.swift */; };
 		E039499C201CE70F00413C94 /* FeedCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */; };
 		E03949A0201CECAB00413C94 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E039499F201CECAB00413C94 /* MockNavigationController.swift */; };
+		E04B803820210FA50017492A /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B803620210FA50017492A /* EventCell.swift */; };
+		E04B803920210FA50017492A /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E04B803720210FA50017492A /* EventCell.xib */; };
+		E04B803B20210FE40017492A /* EventCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B803A20210FE40017492A /* EventCellViewModel.swift */; };
+		E04B803D202117BB0017492A /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B803C202117BB0017492A /* Identifiable.swift */; };
+		E04B803F202117E80017492A /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B803E202117E80017492A /* UITableViewCell.swift */; };
+		E04B8041202118860017492A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B8040202118860017492A /* UITableView.swift */; };
 		E0A864AA201CFA8B0027A553 /* RootCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864A9201CFA8B0027A553 /* RootCoordinatorTests.swift */; };
 		E0A864AD201D00320027A553 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864AC201D00320027A553 /* GithubAPI.swift */; };
 		E0A864B1201D01E00027A553 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864B0201D01E00027A553 /* HTTPMethod.swift */; };
@@ -86,6 +92,12 @@
 		E0394995201CE16B00413C94 /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 		E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinatorTests.swift; sourceTree = "<group>"; };
 		E039499F201CECAB00413C94 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
+		E04B803620210FA50017492A /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		E04B803720210FA50017492A /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		E04B803A20210FE40017492A /* EventCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewModel.swift; sourceTree = "<group>"; };
+		E04B803C202117BB0017492A /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		E04B803E202117E80017492A /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		E04B8040202118860017492A /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		E0A864A9201CFA8B0027A553 /* RootCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorTests.swift; sourceTree = "<group>"; };
 		E0A864AC201D00320027A553 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
 		E0A864B0201D01E00027A553 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -155,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				E016DA43201E250C0043BEE5 /* URLSession.swift */,
+				E04B803E202117E80017492A /* UITableViewCell.swift */,
+				E04B8040202118860017492A /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -258,6 +272,7 @@
 			children = (
 				E039498F201CDE1C00413C94 /* Coordinator.swift */,
 				E016DA41201E24DA0043BEE5 /* URLSessionProtocol.swift */,
+				E04B803C202117BB0017492A /* Identifiable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -273,6 +288,7 @@
 		E0394992201CE0CB00413C94 /* FeedScene */ = {
 			isa = PBXGroup;
 			children = (
+				E04B803520210F900017492A /* Cells */,
 				E0394995201CE16B00413C94 /* FeedCoordinator.swift */,
 				E0394980201CD9DA00413C94 /* FeedViewController.swift */,
 				E0394981201CD9DA00413C94 /* FeedViewController.xib */,
@@ -320,6 +336,16 @@
 				E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */,
 			);
 			path = FeedScene;
+			sourceTree = "<group>";
+		};
+		E04B803520210F900017492A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E04B803620210FA50017492A /* EventCell.swift */,
+				E04B803720210FA50017492A /* EventCell.xib */,
+				E04B803A20210FE40017492A /* EventCellViewModel.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E0A864A8201CFA760027A553 /* Root */ = {
@@ -479,6 +505,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04B803920210FA50017492A /* EventCell.xib in Resources */,
 				E039497F201CD92800413C94 /* Launch Screen.storyboard in Resources */,
 				E0394983201CD9DA00413C94 /* FeedViewController.xib in Resources */,
 				E0394961201CD50500413C94 /* Assets.xcassets in Resources */,
@@ -628,18 +655,23 @@
 				E0FE8D22201DF6D8001CBBD5 /* NetworkError.swift in Sources */,
 				E016DA44201E250C0043BEE5 /* URLSession.swift in Sources */,
 				E0AC2BBF201FAA52008A7EE4 /* Event.swift in Sources */,
+				E04B803F202117E80017492A /* UITableViewCell.swift in Sources */,
 				E0394982201CD9DA00413C94 /* FeedViewController.swift in Sources */,
 				E039495A201CD50500413C94 /* AppDelegate.swift in Sources */,
 				E0394989201CDAE700413C94 /* NavigationTransitionType.swift in Sources */,
 				E0A864AD201D00320027A553 /* GithubAPI.swift in Sources */,
 				E0394985201CD9E700413C94 /* FeedViewModel.swift in Sources */,
 				E039498D201CDC2900413C94 /* Navigator.swift in Sources */,
+				E04B8041202118860017492A /* UITableView.swift in Sources */,
+				E04B803820210FA50017492A /* EventCell.swift in Sources */,
 				E0394990201CDE1C00413C94 /* Coordinator.swift in Sources */,
 				E0FE8D1B201DE60B001CBBD5 /* GithubAPIClient.swift in Sources */,
 				E016DA42201E24DA0043BEE5 /* URLSessionProtocol.swift in Sources */,
 				E0A864B1201D01E00027A553 /* HTTPMethod.swift in Sources */,
 				E0394994201CE0E100413C94 /* RootCoordinator.swift in Sources */,
 				E0A864BD201D08640027A553 /* Configuration.swift in Sources */,
+				E04B803D202117BB0017492A /* Identifiable.swift in Sources */,
+				E04B803B20210FE40017492A /* EventCellViewModel.swift in Sources */,
 				E0AC2BC1201FABD7008A7EE4 /* Actor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
