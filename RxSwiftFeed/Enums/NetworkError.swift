@@ -9,17 +9,17 @@
 import Foundation
 
 enum NetworkError: Swift.Error {
-  case general
-  case withDescription(String)
+  case unknown
+  case response
   case withCode(Int)
   case noConnection
   
   var message: String {
     switch self {
-    case .general:
+    case .unknown:
       return "General server error."
-    case .withDescription(let description):
-      return description
+    case .response:
+      return "Response is not NSHTTPURLResponse"
     case .noConnection:
       return "No internet connection."
     case .withCode(let code):

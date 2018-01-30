@@ -32,11 +32,12 @@ class GithubAPIClient: GithubAPIClientProtocol {
       let url = GithubAPI.events(identifier).asURLRequest()
       let task = self.session.dataTask(with: url, completionHandler: { data, response, error in
         guard let response = response, let data = data else {
-          observer(.error(error ?? NetworkError.general))
+          observer(.error(error ?? NetworkError.unknown))
           return
         }
         guard let httpResponse = response as? HTTPURLResponse else {
-          observer(.error(NetworkError.general))
+          
+          observer(.error(NetworkError.response))
           return
         }
         guard (200...299).contains(httpResponse.statusCode) else {

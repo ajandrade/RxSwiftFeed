@@ -51,7 +51,7 @@ class GithubAPIClientTests: XCTestCase {
     apiClient = GithubAPIClient(session: mockSession)
 
     let errorExpectation = expectation(description: "Error")
-    let errorToMatch = RxCocoaURLError.unknown.localizedDescription
+    let errorToMatch = NetworkError.unknown.localizedDescription
     
     let request = apiClient.fetchEvents(for: "ReactiveX/RxSwift")
     
@@ -71,7 +71,7 @@ class GithubAPIClientTests: XCTestCase {
     apiClient = GithubAPIClient(session: mockSession)
     
     let errorExpectation = expectation(description: "Error")
-    let errorToMatch = RxCocoaURLError.nonHTTPResponse(response: urlResponse).localizedDescription
+    let errorToMatch = NetworkError.response.localizedDescription
     
     let request = apiClient.fetchEvents(for: "ReactiveX/RxSwift")
     request.subscribe(onSuccess: { _ in
@@ -92,21 +92,17 @@ class GithubAPIClientTests: XCTestCase {
     let errorExpectation = expectation(description: "Error")
     
     let request = apiClient.fetchEvents(for: "ReactiveX/RxSwift")
-    request.subscribe(onSuccess: { result in
-      switch result {
-      case .success:
-        XCTFail()
-      case .failure(let err):
-        if case let NetworkError.withCode(code) = err {
-          XCTAssertEqual(code, 404)
-          errorExpectation.fulfill()
-        } else {
-          XCTFail()
-        }
-      }
-    }, onError: { error in
+    request.subscribe(onSuccess: { _ in
       XCTFail()
-    }).disposed(by: bag)
+    }, onError: { error in
+      if let err = error as? NetworkError, case let NetworkError.withCode(code) = err {
+        XCTAssertEqual(code, 404)
+        errorExpectation.fulfill()
+      } else {
+        XCTFail()
+      }
+    })
+      .disposed(by: bag)
     
     wait(for: [errorExpectation], timeout: 1)
   }
@@ -119,16 +115,12 @@ class GithubAPIClientTests: XCTestCase {
     let dataExpectation = expectation(description: "Success!")
     
     let request = apiClient.fetchEvents(for: "ReactiveX/RxSwift")
-    request.subscribe(onSuccess: { result in
-      switch result {
-      case .success:
-        dataExpectation.fulfill()
-      case .failure:
-        XCTFail()
-      }
-    }, onError: { error in
+    request.subscribe(onSuccess: { _ in
+      dataExpectation.fulfill()
+    }, onError: { _ in
       XCTFail()
-    }).disposed(by: bag)
+    })
+    .disposed(by: bag)
     
     wait(for: [dataExpectation], timeout: 1)
   }
