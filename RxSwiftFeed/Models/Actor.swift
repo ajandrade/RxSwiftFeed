@@ -9,7 +9,7 @@
 import Foundation
 
 struct Actor {
-  let login: String
+  let name: String
   let avatarUrlString: String
 }
 
@@ -18,7 +18,7 @@ extension Actor: Decodable {
   // MARK: - KEYS
   
   enum CodingKeys: String, CodingKey {
-    case login = "display_login"
+    case name = "display_login"
     case avatarUrlString = "avatar_url"
   }
   
@@ -26,7 +26,7 @@ extension Actor: Decodable {
   
   init(from decoder: Decoder) throws {
     let values = try decoder.container(keyedBy: CodingKeys.self)
-    login = try values.decode(String.self, forKey: .login)
+    name = try values.decode(String.self, forKey: .name)
     avatarUrlString = try values.decode(String.self, forKey: .avatarUrlString)
   }
   
@@ -35,7 +35,7 @@ extension Actor: Decodable {
 extension Actor: Equatable {
   
   static func == (lhs: Actor, rhs: Actor) -> Bool {
-    return lhs.login == rhs.login && lhs.avatarUrlString == rhs.avatarUrlString
+    return lhs.name == rhs.name && lhs.avatarUrlString == rhs.avatarUrlString
   }
   
 }
