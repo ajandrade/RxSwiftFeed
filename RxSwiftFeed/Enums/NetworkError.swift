@@ -10,6 +10,7 @@ import Foundation
 
 enum NetworkError: Swift.Error {
   case general
+  case withDescription(String)
   case withCode(Int)
   case noConnection
   
@@ -17,8 +18,10 @@ enum NetworkError: Swift.Error {
     switch self {
     case .general:
       return "General server error."
+    case .withDescription(let description):
+      return description
     case .noConnection:
-      return "No internet."
+      return "No internet connection."
     case .withCode(let code):
       return "\(code)"
     }

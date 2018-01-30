@@ -15,7 +15,6 @@
 		E016DA42201E24DA0043BEE5 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA41201E24DA0043BEE5 /* URLSessionProtocol.swift */; };
 		E016DA44201E250C0043BEE5 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA43201E250C0043BEE5 /* URLSession.swift */; };
 		E016DA46201E25BF0043BEE5 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA45201E25BF0043BEE5 /* MockURLSessionDataTask.swift */; };
-		E016DA48201E571F0043BEE5 /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA47201E571E0043BEE5 /* ObservableType.swift */; };
 		E039495A201CD50500413C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394959201CD50500413C94 /* AppDelegate.swift */; };
 		E0394961201CD50500413C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0394960201CD50500413C94 /* Assets.xcassets */; };
 		E039497F201CD92800413C94 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E039497E201CD92800413C94 /* Launch Screen.storyboard */; };
@@ -45,7 +44,6 @@
 		E0AC2BD1201FC980008A7EE4 /* Event.json in Resources */ = {isa = PBXBuildFile; fileRef = E0AC2BD0201FC980008A7EE4 /* Event.json */; };
 		E0EEF1B7201CF06600052978 /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EEF1B6201CF06600052978 /* NavigatorTests.swift */; };
 		E0FE8D1B201DE60B001CBBD5 /* GithubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE8D1A201DE60B001CBBD5 /* GithubAPIClient.swift */; };
-		E0FE8D20201DF698001CBBD5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE8D1F201DF698001CBBD5 /* Result.swift */; };
 		E0FE8D22201DF6D8001CBBD5 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FE8D21201DF6D8001CBBD5 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +69,6 @@
 		E016DA41201E24DA0043BEE5 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		E016DA43201E250C0043BEE5 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		E016DA45201E25BF0043BEE5 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
-		E016DA47201E571E0043BEE5 /* ObservableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableType.swift; sourceTree = "<group>"; };
 		E0394956201CD50500413C94 /* RxSwiftFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0394959201CD50500413C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0394960201CD50500413C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,7 +107,6 @@
 		E0AC2BD0201FC980008A7EE4 /* Event.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Event.json; sourceTree = "<group>"; };
 		E0EEF1B6201CF06600052978 /* NavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTests.swift; sourceTree = "<group>"; };
 		E0FE8D1A201DE60B001CBBD5 /* GithubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPIClient.swift; sourceTree = "<group>"; };
-		E0FE8D1F201DF698001CBBD5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E0FE8D21201DF6D8001CBBD5 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		EB0FF26F85A1895B862361C1 /* Pods-RxSwiftFeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftFeedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftFeedTests/Pods-RxSwiftFeedTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,7 +154,6 @@
 		E016DA2C201E08CA0043BEE5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E016DA47201E571E0043BEE5 /* ObservableType.swift */,
 				E016DA43201E250C0043BEE5 /* URLSession.swift */,
 			);
 			path = Extensions;
@@ -389,7 +384,6 @@
 			children = (
 				E0FE8D21201DF6D8001CBBD5 /* NetworkError.swift */,
 				E0A864B0201D01E00027A553 /* HTTPMethod.swift */,
-				E0FE8D1F201DF698001CBBD5 /* Result.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -629,11 +623,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0AC2BC3201FABDD008A7EE4 /* Repository.swift in Sources */,
-				E016DA48201E571F0043BEE5 /* ObservableType.swift in Sources */,
 				E0394996201CE16B00413C94 /* FeedCoordinator.swift in Sources */,
 				E0AC2BBD201FA5D5008A7EE4 /* DependencyContainer.swift in Sources */,
 				E0FE8D22201DF6D8001CBBD5 /* NetworkError.swift in Sources */,
-				E0FE8D20201DF698001CBBD5 /* Result.swift in Sources */,
 				E016DA44201E250C0043BEE5 /* URLSession.swift in Sources */,
 				E0AC2BBF201FAA52008A7EE4 /* Event.swift in Sources */,
 				E0394982201CD9DA00413C94 /* FeedViewController.swift in Sources */,

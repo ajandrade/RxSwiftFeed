@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 protocol GithubAPIClientProtocol {
-  func fetchEvents(for identifier: String) -> Single<NetworkResult>
+  func fetchEvents(for identifier: String) -> Single<Data>
 }
 
 class GithubAPIClient: GithubAPIClientProtocol {
@@ -27,23 +27,23 @@ class GithubAPIClient: GithubAPIClientProtocol {
   
   // MARK: - FUNCTIONS
   
-  func fetchEvents(for identifier: String) -> Single<NetworkResult> {
-    let url = GithubAPI.events(identifier).asURLRequest()
+  func fetchEvents(for identifier: String) -> Single<Data> {
     return Single.create(subscribe: { observer in
+      let url = GithubAPI.events(identifier).asURLRequest()
       let task = self.session.dataTask(with: url, completionHandler: { data, response, error in
         guard let response = response, let data = data else {
-          observer(.error(error ?? RxCocoaURLError.unknown))
+          observer(.error(error ?? NetworkError.general))
           return
         }
         guard let httpResponse = response as? HTTPURLResponse else {
-          observer(.error(RxCocoaURLError.nonHTTPResponse(response: response)))
+          observer(.error(NetworkError.general))
           return
         }
         guard (200...299).contains(httpResponse.statusCode) else {
-          observer(.success(Result.failure(NetworkError.withCode(httpResponse.statusCode))))
+          observer(.error(NetworkError.withCode(httpResponse.statusCode)))
           return
         }
-        observer(.success(Result.success(data)))
+        observer(.success(data))
       })
       
       task.resume()
@@ -52,14 +52,6 @@ class GithubAPIClient: GithubAPIClientProtocol {
     })
       .debug()
       .retry(2)
-    
-//    return session
-//      .rx
-//      .response(request: GithubAPI.events(identifier).asURLRequest())
-//      .debug()
-//      .retry(3)
-//      .filterSuccessfulStatusCodes()
-//      .asSingle()
   }
   
 }
