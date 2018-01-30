@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class FeedViewController: UIViewController {
   
@@ -14,18 +16,37 @@ class FeedViewController: UIViewController {
   
   var viewModel: FeedViewModelRepresentable!
   
+  // MARK: - PRIVATE PROPERTIES
+  
+  private let bag = DisposeBag()
+  
   // MARK: - IBOUTLETS
   
   @IBOutlet private weak var tableView: UITableView! {
-    didSet { tableView.refreshControl = UIRefreshControl() }
+    didSet {
+      tableView.refreshControl = UIRefreshControl()
+      tableView.register(EventCell.self)
+    }
   }
   
   // MARK: - VIEW LIFE CYCLE
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     title = "RxSwiftFeed"
     setRefreshControl()
+    
+    bindDataSource()
+  }
+  
+  func bindDataSource() {
+    viewModel
+      .eventViewModels
+      .drive(tableView.rx.items(cellIdentifier: EventCell.identifier, cellType: EventCell.self)) { _, model, cell in
+        cell.configure(with: model)
+      }
+      .disposed(by: bag)
   }
   
   private func setRefreshControl() {
