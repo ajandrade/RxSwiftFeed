@@ -18,7 +18,7 @@ class EventTests: XCTestCase {
   override func setUp() {
     super.setUp()
     repository = Repository(name: "")
-    actor = Actor(login: "", avatarUrlString: "")
+    actor = Actor(name: "", avatarUrlString: "")
     action = ""
   }
   

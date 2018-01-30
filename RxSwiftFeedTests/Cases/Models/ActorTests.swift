@@ -11,18 +11,18 @@ import XCTest
 
 class ActorTests: XCTestCase {
   
-  var login: String!
+  var actorName: String!
   var avatarUrlString: String!
   
   override func setUp() {
     super.setUp()
-    login = ""
+    actorName = ""
     avatarUrlString = ""
   }
   
   override func tearDown() {
     super.tearDown()
-    login = nil
+    actorName = nil
     avatarUrlString = nil
   }
   
@@ -33,18 +33,18 @@ class ActorTests: XCTestCase {
   }
   
   func testLoginIsSetOnInit() {
-    let actor = Actor(login: login, avatarUrlString: avatarUrlString)
-    XCTAssertEqual(actor.login, login)
+    let actor = Actor(name: actorName, avatarUrlString: avatarUrlString)
+    XCTAssertEqual(actor.name, actorName)
   }
   
   func testAvatarUrlIsSetOnInit() {
-    let actor = Actor(login: login, avatarUrlString: avatarUrlString)
+    let actor = Actor(name: actorName, avatarUrlString: avatarUrlString)
     XCTAssertEqual(actor.avatarUrlString, avatarUrlString)
   }
   
   func testEquality() {
-    let actor1 = Actor(login: login, avatarUrlString: avatarUrlString)
-    let actor2 = Actor(login: login, avatarUrlString: avatarUrlString)
+    let actor1 = Actor(name: actorName, avatarUrlString: avatarUrlString)
+    let actor2 = Actor(name: actorName, avatarUrlString: avatarUrlString)
     XCTAssertEqual(actor1, actor2)
   }
     
