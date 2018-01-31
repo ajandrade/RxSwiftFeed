@@ -36,6 +36,9 @@
 		E04B8041202118860017492A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B8040202118860017492A /* UITableView.swift */; };
 		E04B804620223E790017492A /* EventCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B804520223E790017492A /* EventCellViewModelTests.swift */; };
 		E04B80482022412E0017492A /* EventCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B80472022412E0017492A /* EventCellTests.swift */; };
+		E04B804C20224AB70017492A /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B804B20224AB70017492A /* FeedViewControllerTests.swift */; };
+		E04B804E20224B380017492A /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B804D20224B380017492A /* UIViewController.swift */; };
+		E04B805020224B540017492A /* MockFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B804F20224B540017492A /* MockFeedViewModel.swift */; };
 		E0A864AA201CFA8B0027A553 /* RootCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864A9201CFA8B0027A553 /* RootCoordinatorTests.swift */; };
 		E0A864AD201D00320027A553 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864AC201D00320027A553 /* GithubAPI.swift */; };
 		E0A864B1201D01E00027A553 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864B0201D01E00027A553 /* HTTPMethod.swift */; };
@@ -102,6 +105,9 @@
 		E04B8040202118860017492A /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		E04B804520223E790017492A /* EventCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewModelTests.swift; sourceTree = "<group>"; };
 		E04B80472022412E0017492A /* EventCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellTests.swift; sourceTree = "<group>"; };
+		E04B804B20224AB70017492A /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
+		E04B804D20224B380017492A /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		E04B804F20224B540017492A /* MockFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFeedViewModel.swift; sourceTree = "<group>"; };
 		E0A864A9201CFA8B0027A553 /* RootCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorTests.swift; sourceTree = "<group>"; };
 		E0A864AC201D00320027A553 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
 		E0A864B0201D01E00027A553 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -173,6 +179,7 @@
 				E016DA43201E250C0043BEE5 /* URLSession.swift */,
 				E04B803E202117E80017492A /* UITableViewCell.swift */,
 				E04B8040202118860017492A /* UITableView.swift */,
+				E04B804D20224B380017492A /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,6 +314,7 @@
 				E039499F201CECAB00413C94 /* MockNavigationController.swift */,
 				E016DA3B201E19650043BEE5 /* MockURLSession.swift */,
 				E016DA45201E25BF0043BEE5 /* MockURLSessionDataTask.swift */,
+				E04B804F20224B540017492A /* MockFeedViewModel.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -339,6 +347,7 @@
 			children = (
 				E04B804420223E480017492A /* Cells */,
 				E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */,
+				E04B804B20224AB70017492A /* FeedViewControllerTests.swift */,
 			);
 			path = FeedScene;
 			sourceTree = "<group>";
@@ -667,6 +676,7 @@
 				E0394996201CE16B00413C94 /* FeedCoordinator.swift in Sources */,
 				E0AC2BBD201FA5D5008A7EE4 /* DependencyContainer.swift in Sources */,
 				E0FE8D22201DF6D8001CBBD5 /* NetworkError.swift in Sources */,
+				E04B804E20224B380017492A /* UIViewController.swift in Sources */,
 				E016DA44201E250C0043BEE5 /* URLSession.swift in Sources */,
 				E0AC2BBF201FAA52008A7EE4 /* Event.swift in Sources */,
 				E04B803F202117E80017492A /* UITableViewCell.swift in Sources */,
@@ -700,9 +710,11 @@
 				E016DA3C201E19650043BEE5 /* MockURLSession.swift in Sources */,
 				E0AC2BCA201FC452008A7EE4 /* RepositoryTests.swift in Sources */,
 				E016DA3A201E192C0043BEE5 /* GithubAPIClientTests.swift in Sources */,
+				E04B804C20224AB70017492A /* FeedViewControllerTests.swift in Sources */,
 				E04B804620223E790017492A /* EventCellViewModelTests.swift in Sources */,
 				E0A864AA201CFA8B0027A553 /* RootCoordinatorTests.swift in Sources */,
 				E039499C201CE70F00413C94 /* FeedCoordinatorTests.swift in Sources */,
+				E04B805020224B540017492A /* MockFeedViewModel.swift in Sources */,
 				E0EEF1B7201CF06600052978 /* NavigatorTests.swift in Sources */,
 				E03949A0201CECAB00413C94 /* MockNavigationController.swift in Sources */,
 				E016DA46201E25BF0043BEE5 /* MockURLSessionDataTask.swift in Sources */,
