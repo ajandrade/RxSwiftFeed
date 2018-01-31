@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Repository: Decodable {
+struct Repository: Codable {
   let name: String
 }
 
@@ -19,10 +19,3 @@ extension Repository: Equatable {
   }
   
 }
-
-// EXAMPLE:
-//"repo": {
-//  "id": 33569135,
-//  "name": "ReactiveX/RxSwift",
-//  "url": "https://api.github.com/repos/ReactiveX/RxSwift"
-//}

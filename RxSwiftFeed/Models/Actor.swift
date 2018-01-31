@@ -32,6 +32,16 @@ extension Actor: Decodable {
   
 }
 
+extension Actor: Encodable {
+  
+  func encode(to encoder: Encoder) throws {
+    var container = encoder.container(keyedBy: CodingKeys.self)
+    try container.encode(name, forKey: .name)
+    try container.encode(avatarUrlString, forKey: .avatarUrlString)
+  }
+  
+}
+
 extension Actor: Equatable {
   
   static func == (lhs: Actor, rhs: Actor) -> Bool {
@@ -39,13 +49,3 @@ extension Actor: Equatable {
   }
   
 }
-
-// EXAMPLE:
-//"actor": {
-//  "id": 18651547,
-//  "login": "lanlingdiao",
-//  "display_login": "lanlingdiao",
-//  "gravatar_id": "",
-//  "url": "https://api.github.com/users/lanlingdiao",
-//  "avatar_url": "https://avatars.githubusercontent.com/u/18651547?"
-//}

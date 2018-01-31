@@ -31,6 +31,17 @@ extension Event: Decodable {
   
 }
 
+extension Event: Encodable {
+  
+  func encode(to encoder: Encoder) throws {
+    var container = encoder.container(keyedBy: CodingKeys.self)
+    try container.encode(repository, forKey: .repo)
+    try container.encode(actor, forKey: .actor)
+    try container.encode(action, forKey: .type)
+  }
+  
+}
+
 extension Event: Equatable {
   
   static func == (lhs: Event, rhs: Event) -> Bool {
@@ -38,34 +49,3 @@ extension Event: Equatable {
   }
   
 }
-
-// EXAMPLE:
-//{
-//  "id": "7161380153",
-//  "type": "WatchEvent",
-//  "actor": {
-//    "id": 18651547,
-//    "login": "lanlingdiao",
-//    "display_login": "lanlingdiao",
-//    "gravatar_id": "",
-//    "url": "https://api.github.com/users/lanlingdiao",
-//    "avatar_url": "https://avatars.githubusercontent.com/u/18651547?"
-//  },
-//  "repo": {
-//    "id": 33569135,
-//    "name": "ReactiveX/RxSwift",
-//    "url": "https://api.github.com/repos/ReactiveX/RxSwift"
-//  },
-//  "payload": {
-//    "action": "started"
-//  },
-//  "public": true,
-//  "created_at": "2018-01-28T13:26:31Z",
-//  "org": {
-//    "id": 6407041,
-//    "login": "ReactiveX",
-//    "gravatar_id": "",
-//    "url": "https://api.github.com/orgs/ReactiveX",
-//    "avatar_url": "https://avatars.githubusercontent.com/u/6407041?"
-//  }
-//}
