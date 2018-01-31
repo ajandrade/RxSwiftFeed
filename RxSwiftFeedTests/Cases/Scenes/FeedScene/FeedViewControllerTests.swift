@@ -46,7 +46,7 @@ class FeedViewControllerTests: XCTestCase {
     XCTAssertNotNil(viewController.tableView.dataSource)
   }
   
-  func testNumberOfRowsIsSetByViewModel() {
+  func testUITableViewDataSourceDataIsSetByViewModel() {
     let numberOfRows = viewController.tableView.numberOfRows(inSection: 0)
     XCTAssertTrue(viewModel.calledEventViewModels)
     XCTAssertEqual(numberOfRows, 1)
