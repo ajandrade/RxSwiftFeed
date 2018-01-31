@@ -35,6 +35,7 @@
 		E04B803F202117E80017492A /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B803E202117E80017492A /* UITableViewCell.swift */; };
 		E04B8041202118860017492A /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B8040202118860017492A /* UITableView.swift */; };
 		E04B804620223E790017492A /* EventCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B804520223E790017492A /* EventCellViewModelTests.swift */; };
+		E04B80482022412E0017492A /* EventCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B80472022412E0017492A /* EventCellTests.swift */; };
 		E0A864AA201CFA8B0027A553 /* RootCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864A9201CFA8B0027A553 /* RootCoordinatorTests.swift */; };
 		E0A864AD201D00320027A553 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864AC201D00320027A553 /* GithubAPI.swift */; };
 		E0A864B1201D01E00027A553 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A864B0201D01E00027A553 /* HTTPMethod.swift */; };
@@ -100,6 +101,7 @@
 		E04B803E202117E80017492A /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		E04B8040202118860017492A /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		E04B804520223E790017492A /* EventCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewModelTests.swift; sourceTree = "<group>"; };
+		E04B80472022412E0017492A /* EventCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellTests.swift; sourceTree = "<group>"; };
 		E0A864A9201CFA8B0027A553 /* RootCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorTests.swift; sourceTree = "<group>"; };
 		E0A864AC201D00320027A553 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
 		E0A864B0201D01E00027A553 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				E04B804520223E790017492A /* EventCellViewModelTests.swift */,
+				E04B80472022412E0017492A /* EventCellTests.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04B80482022412E0017492A /* EventCellTests.swift in Sources */,
 				E0AC2BC8201FC448008A7EE4 /* ActorTests.swift in Sources */,
 				E0AC2BC6201FC43D008A7EE4 /* EventTests.swift in Sources */,
 				E016DA3C201E19650043BEE5 /* MockURLSession.swift in Sources */,
