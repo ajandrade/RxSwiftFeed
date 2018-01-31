@@ -22,7 +22,7 @@ class FeedViewController: UIViewController {
   
   // MARK: - IBOUTLETS
   
-  @IBOutlet private weak var tableView: UITableView! {
+  @IBOutlet weak var tableView: UITableView! {
     didSet {
       tableView.refreshControl = UIRefreshControl()
       tableView.register(EventCell.self)
