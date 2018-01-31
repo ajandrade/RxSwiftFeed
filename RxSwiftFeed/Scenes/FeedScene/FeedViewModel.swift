@@ -24,8 +24,8 @@ struct FeedViewModel: FeedViewModelRepresentable {
   // MARK: - INTERNAL PROPERTIES
   
   private let bag = DisposeBag()
-  private var allEvents = Variable<[Event]>([])
-  private var allEventViewModels = Variable<[EventCellViewModel]>([])
+  private var allEvents = BehaviorRelay(value: [Event]())
+  private var allEventViewModels = BehaviorRelay(value: [EventCellViewModel]())
 
   // MARK: - OUTPUT PROPERTIES
   
@@ -46,8 +46,9 @@ struct FeedViewModel: FeedViewModelRepresentable {
     fetchEvents()
       .map(processEvents)
       .subscribe(onSuccess: { events in
-        self.allEvents.value = events
-        self.allEventViewModels.value = events.flatMap(EventCellViewModel.init)
+        self.allEvents.accept(events)
+        let cellViewModels = events.flatMap(EventCellViewModel.init)
+        self.allEventViewModels.accept(cellViewModels)
       }, onError: { error in
           print(error)
       })
