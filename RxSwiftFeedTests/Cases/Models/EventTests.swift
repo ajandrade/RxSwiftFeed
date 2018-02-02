@@ -35,6 +35,12 @@ class EventTests: XCTestCase {
     XCTAssertNotNil(event)
   }
   
+  func testIsCodable() {
+    let event = Event(repository: repository, actor: actor, action: action)
+    let encodedData = try? JSONEncoder().encode(event)
+    XCTAssertNotNil(encodedData)
+  }
+  
   func testRepositoryIsSetOnInit() {
     let event = Event(repository: repository, actor: actor, action: action)
     XCTAssertEqual(event.repository, repository)

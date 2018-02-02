@@ -29,6 +29,12 @@ class RepositoryTests: XCTestCase {
     XCTAssertNotNil(repository)
   }
   
+  func testIsCodable() {
+    let repo = Repository(name: _name)
+    let encodedData = try? JSONEncoder().encode(repo)
+    XCTAssertNotNil(encodedData)
+  }
+  
   func testNameIsSetOnInit() {
     let repository = Repository(name: _name)
     XCTAssertEqual(repository.name, _name)

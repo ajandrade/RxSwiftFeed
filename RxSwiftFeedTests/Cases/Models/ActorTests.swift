@@ -32,6 +32,12 @@ class ActorTests: XCTestCase {
     XCTAssertNotNil(actor)
   }
   
+  func testIsCodable() {
+    let actor = Actor(name: actorName, avatarUrlString: avatarUrlString)
+    let encodedData = try? JSONEncoder().encode(actor)
+    XCTAssertNotNil(encodedData)
+  }
+  
   func testLoginIsSetOnInit() {
     let actor = Actor(name: actorName, avatarUrlString: avatarUrlString)
     XCTAssertEqual(actor.name, actorName)
