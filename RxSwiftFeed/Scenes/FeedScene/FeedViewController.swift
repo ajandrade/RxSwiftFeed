@@ -39,14 +39,33 @@ class FeedViewController: UIViewController {
     setRefreshControl()
     
     bindDataSource()
+    bindViewModel()
   }
   
   func bindDataSource() {
-    viewModel
-      .eventViewModels
+    viewModel.fetch()
+    
+    viewModel.eventViewModels
       .drive(tableView.rx.items(cellIdentifier: EventCell.identifier, cellType: EventCell.self)) { _, viewModel, cell in
         cell.configure(with: viewModel)
       }
+      .disposed(by: bag)
+  }
+  
+  func bindViewModel() {
+    viewModel.didFinishGettingEvents
+      .filter { $0 }
+      .drive(onNext: { [weak self] _ in
+        self?.tableView.refreshControl?.endRefreshing()
+      })
+      .disposed(by: bag)
+    
+    viewModel.didFinishWithError
+      .filter { $0 != nil }
+      .drive(onNext: { [weak self] error in
+        self?.tableView.refreshControl?.endRefreshing()
+        self?.showAlert(with: error!.localizedDescription)
+      })
       .disposed(by: bag)
   }
   
@@ -55,12 +74,11 @@ class FeedViewController: UIViewController {
     refreshControl?.backgroundColor = UIColor(white: 0.98, alpha: 1.0)
     refreshControl?.tintColor = UIColor.darkGray
     refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
-    refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
-  }
-  
-  @objc func refresh() {
-    print("Refresh")
-    tableView.refreshControl?.endRefreshing()
+    
+    refreshControl?.rx
+      .controlEvent(.valueChanged)
+      .bind(to: viewModel.needsUpdate)
+      .disposed(by: bag)
   }
   
 }

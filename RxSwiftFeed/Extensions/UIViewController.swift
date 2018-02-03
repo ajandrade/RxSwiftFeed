@@ -9,3 +9,4 @@
 import UIKit
 
 extension UIViewController: Identifiable { }
+extension UIViewController: Alertable { }

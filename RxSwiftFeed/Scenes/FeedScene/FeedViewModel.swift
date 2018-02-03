@@ -11,7 +11,14 @@ import RxSwift
 import RxCocoa
 
 protocol FeedViewModelRepresentable {
+  // Input
+  var needsUpdate: PublishSubject<Void> { get }
+  // Output
   var eventViewModels: Driver<[EventCellViewModel]> { get }
+  var didFinishGettingEvents: Driver<Bool> { get }
+  var didFinishWithError: Driver<Error?> { get }
+  
+  func fetch()
 }
 
 struct FeedViewModel: FeedViewModelRepresentable {
@@ -24,8 +31,14 @@ struct FeedViewModel: FeedViewModelRepresentable {
   // MARK: - INTERNAL PROPERTIES
   
   private let bag = DisposeBag()
-  private var allEvents = BehaviorRelay(value: [Event]())
+  
   private var allEventViewModels = BehaviorRelay(value: [EventCellViewModel]())
+  private var errorContainer = BehaviorRelay<Error?>(value: nil)
+  private var activityTrackerContainer = BehaviorRelay(value: false)
+  
+  // MARK: - INPUT PROPERTIES
+  
+  let needsUpdate = PublishSubject<Void>()
 
   // MARK: - OUTPUT PROPERTIES
   
@@ -33,11 +46,19 @@ struct FeedViewModel: FeedViewModelRepresentable {
     return allEventViewModels.asDriver()
   }
   
+  var didFinishGettingEvents: Driver<Bool> {
+    return activityTrackerContainer.asDriver()
+  }
+  
+  var didFinishWithError: Driver<Error?> {
+    return errorContainer.asDriver()
+  }
+  
   // MARK: - INITIALIZER
   
   init(dependencies: Dependencies) {
     self.dependencies = dependencies
-    fetch()
+    setNeedsUpdate()
   }
   
   // MARK: - FUNCTIONS
@@ -45,19 +66,27 @@ struct FeedViewModel: FeedViewModelRepresentable {
   func fetch() {
     fetchEvents()
       .map(Event.decodeEvents)
-      .subscribe(onSuccess: { events in
-        self.allEvents.accept(events)
-        let cellViewModels = events.flatMap(EventCellViewModel.init)
+      .map { $0.flatMap(EventCellViewModel.init) }
+      .debug()
+      .subscribe(onSuccess: { cellViewModels in
         self.allEventViewModels.accept(cellViewModels)
+        self.activityTrackerContainer.accept(true)
       }, onError: { error in
-        // TODO: - Handle
-          print(error)
+        self.errorContainer.accept(error)
       })
-    .disposed(by: bag)
+      .disposed(by: bag)
   }
+  
+  // MARK: - PRIVATE FUNCTIONS
   
   private func fetchEvents() -> Single<Data> {
     return dependencies.githubProvider.fetchEvents(for: "ReactiveX/RxSwift")
+  }
+  
+  private func setNeedsUpdate() {
+    needsUpdate
+      .subscribe(onNext: { _ in self.fetch() })
+      .disposed(by: bag)
   }
   
 }

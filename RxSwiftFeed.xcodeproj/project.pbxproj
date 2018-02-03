@@ -17,6 +17,7 @@
 		E016DA46201E25BF0043BEE5 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E016DA45201E25BF0043BEE5 /* MockURLSessionDataTask.swift */; };
 		E01F834A2022571B0048EB7C /* FeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F83492022571B0048EB7C /* FeedViewModelTests.swift */; };
 		E01F834C2022577B0048EB7C /* MockGithubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F834B2022577B0048EB7C /* MockGithubAPIClient.swift */; };
+		E01F834E202625AB0048EB7C /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F834D202625AB0048EB7C /* Alertable.swift */; };
 		E039495A201CD50500413C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0394959201CD50500413C94 /* AppDelegate.swift */; };
 		E0394961201CD50500413C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0394960201CD50500413C94 /* Assets.xcassets */; };
 		E039497F201CD92800413C94 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E039497E201CD92800413C94 /* Launch Screen.storyboard */; };
@@ -84,6 +85,7 @@
 		E016DA45201E25BF0043BEE5 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		E01F83492022571B0048EB7C /* FeedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModelTests.swift; sourceTree = "<group>"; };
 		E01F834B2022577B0048EB7C /* MockGithubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGithubAPIClient.swift; sourceTree = "<group>"; };
+		E01F834D202625AB0048EB7C /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		E0394956201CD50500413C94 /* RxSwiftFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0394959201CD50500413C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0394960201CD50500413C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				E039498F201CDE1C00413C94 /* Coordinator.swift */,
 				E016DA41201E24DA0043BEE5 /* URLSessionProtocol.swift */,
 				E04B803C202117BB0017492A /* Identifiable.swift */,
+				E01F834D202625AB0048EB7C /* Alertable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				E04B803820210FA50017492A /* EventCell.swift in Sources */,
 				E0394990201CDE1C00413C94 /* Coordinator.swift in Sources */,
 				E0FE8D1B201DE60B001CBBD5 /* GithubAPIClient.swift in Sources */,
+				E01F834E202625AB0048EB7C /* Alertable.swift in Sources */,
 				E016DA42201E24DA0043BEE5 /* URLSessionProtocol.swift in Sources */,
 				E0A864B1201D01E00027A553 /* HTTPMethod.swift in Sources */,
 				E0394994201CE0E100413C94 /* RootCoordinator.swift in Sources */,
