@@ -38,6 +38,10 @@ class EventCellTests: XCTestCase {
   func testUILabelDescriptionIsConnected() {
     XCTAssertNotNil(cell.descriptionLabel)
   }
+  
+  func testUIImageViewAvatarIsConnected() {
+    XCTAssertNotNil(cell.avatarImageView)
+  }
 
   func testTitleIsSet() {
     XCTAssertEqual(cell.titleLabel.text, viewModel.title)

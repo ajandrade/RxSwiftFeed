@@ -41,5 +41,11 @@ class EventCellViewModelTests: XCTestCase {
     let eventDescription = repository.name  + ", " + event.action.replacingOccurrences(of: "Event", with: "").lowercased()
     XCTAssertEqual(viewModel.eventDescription, eventDescription)
   }
+  
+  func testURLisSet() {
+    let urlString = actor.avatarUrlString
+    let url = URL(string: urlString)
+    XCTAssertEqual(viewModel.avatarUrl, url)
+  }
  
 }

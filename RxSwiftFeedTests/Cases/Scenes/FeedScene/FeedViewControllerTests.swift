@@ -52,4 +52,8 @@ class FeedViewControllerTests: XCTestCase {
     XCTAssertEqual(numberOfRows, 1)
   }
   
+  func testUITableViewRowHeightIsDefinedHas75() {
+    XCTAssertEqual(viewController.tableView.rowHeight, 75)
+  }
+  
 }
