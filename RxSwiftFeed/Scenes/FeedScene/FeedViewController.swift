@@ -24,8 +24,9 @@ class FeedViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView! {
     didSet {
-      tableView.refreshControl = UIRefreshControl()
       tableView.register(EventCell.self)
+      tableView.refreshControl = UIRefreshControl()
+      tableView.rowHeight = 75
     }
   }
   

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class EventCell: UITableViewCell {
   
@@ -14,6 +15,7 @@ class EventCell: UITableViewCell {
   
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
+  @IBOutlet weak var avatarImageView: UIImageView!
   
   // MARK: - UI INITIALIZATION
   
@@ -21,11 +23,20 @@ class EventCell: UITableViewCell {
     super.awakeFromNib()
   }
   
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    titleLabel.text = ""
+    descriptionLabel.text = ""
+    avatarImageView.kf.cancelDownloadTask()
+    avatarImageView.image = nil
+  }
+  
   // MARK: - CONFIGURATION
   
   func configure(with viewModel: EventCellViewModelRepresentable) {
     titleLabel.text = viewModel.title
     descriptionLabel.text = viewModel.eventDescription
+    avatarImageView.kf.setImage(with: viewModel.avatarUrl)
   }
   
 }
