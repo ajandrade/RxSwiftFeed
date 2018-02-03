@@ -36,7 +36,8 @@ class EventCell: UITableViewCell {
   func configure(with viewModel: EventCellViewModelRepresentable) {
     titleLabel.text = viewModel.title
     descriptionLabel.text = viewModel.eventDescription
-    avatarImageView.kf.setImage(with: viewModel.avatarUrl)
+    let processor = RoundCornerImageProcessor(cornerRadius: 50)
+    avatarImageView.kf.setImage(with: viewModel.avatarUrl, placeholder: nil, options: [.processor(processor)])
   }
   
 }
