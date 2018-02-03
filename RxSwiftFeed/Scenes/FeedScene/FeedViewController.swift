@@ -43,8 +43,8 @@ class FeedViewController: UIViewController {
   func bindDataSource() {
     viewModel
       .eventViewModels
-      .drive(tableView.rx.items(cellIdentifier: EventCell.identifier, cellType: EventCell.self)) { _, model, cell in
-        cell.configure(with: model)
+      .drive(tableView.rx.items(cellIdentifier: EventCell.identifier, cellType: EventCell.self)) { _, viewModel, cell in
+        cell.configure(with: viewModel)
       }
       .disposed(by: bag)
   }

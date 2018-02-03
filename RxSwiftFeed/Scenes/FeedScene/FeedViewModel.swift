@@ -44,12 +44,13 @@ struct FeedViewModel: FeedViewModelRepresentable {
 
   func fetch() {
     fetchEvents()
-      .map(processEvents)
+      .map(Event.decodeEvents)
       .subscribe(onSuccess: { events in
         self.allEvents.accept(events)
         let cellViewModels = events.flatMap(EventCellViewModel.init)
         self.allEventViewModels.accept(cellViewModels)
       }, onError: { error in
+        // TODO: - Handle
           print(error)
       })
     .disposed(by: bag)
@@ -57,11 +58,6 @@ struct FeedViewModel: FeedViewModelRepresentable {
   
   private func fetchEvents() -> Single<Data> {
     return dependencies.githubProvider.fetchEvents(for: "ReactiveX/RxSwift")
-  }
-  
-  private func processEvents(_ data: Data) -> [Event] {
-    let events = try? JSONDecoder().decode([Event].self, from: data)
-    return events ?? []
   }
   
 }

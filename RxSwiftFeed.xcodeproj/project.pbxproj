@@ -352,6 +352,7 @@
 			children = (
 				E04B804420223E480017492A /* Cells */,
 				E039499B201CE70F00413C94 /* FeedCoordinatorTests.swift */,
+				E01F83492022571B0048EB7C /* FeedViewModelTests.swift */,
 				E04B804B20224AB70017492A /* FeedViewControllerTests.swift */,
 			);
 			path = FeedScene;
@@ -421,7 +422,6 @@
 			children = (
 				E0A864A8201CFA760027A553 /* Root */,
 				E039499A201CE6E600413C94 /* FeedScene */,
-				E01F83492022571B0048EB7C /* FeedViewModelTests.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

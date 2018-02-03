@@ -41,6 +41,21 @@ class EventTests: XCTestCase {
     XCTAssertNotNil(encodedData)
   }
   
+  func testDecodeEventsReturnsEmptyIfDecodesFail() {
+    let testData = loadJSONData()
+    let events = Event.decodeEvents(testData)
+    XCTAssertNotNil(events)
+    XCTAssertEqual(events.count, 0)
+  }
+  
+  func testDecodeEvents() {
+    let testData = loadJSONData(multipleEvents: true)
+    let events = Event.decodeEvents(testData)
+    XCTAssertNotNil(events)
+    XCTAssertGreaterThan(events.count, 0)
+  }
+
+  
   func testRepositoryIsSetOnInit() {
     let event = Event(repository: repository, actor: actor, action: action)
     XCTAssertEqual(event.repository, repository)
@@ -66,9 +81,14 @@ class EventTests: XCTestCase {
 
 extension EventTests {
   
-  func loadJSONData() -> Data {
+  func loadJSONData(multipleEvents: Bool = false) -> Data {
     let bundle = Bundle(for: type(of: self))
-    let path = bundle.path(forResource: "Event", ofType: "json")!
+    let path: String
+    if multipleEvents {
+      path = bundle.path(forResource: "Events", ofType: "json")!
+    } else {
+      path = bundle.path(forResource: "Event", ofType: "json")!
+    }
     let data = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
     return data
   }

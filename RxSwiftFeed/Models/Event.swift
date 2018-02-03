@@ -29,6 +29,13 @@ extension Event: Decodable {
     action = try values.decode(String.self, forKey: .type)
   }
   
+  // MARK: - FUNCTIONS
+  
+  static func decodeEvents(_ data: Data) -> [Event] {
+    let events = try? JSONDecoder().decode([Event].self, from: data)
+    return events ?? []
+  }
+  
 }
 
 extension Event: Encodable {
